@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dip"
+    android:background="@drawable/title_bar_bg" >
+
+    <ImageView
+        android:id="@+id/iv_goBack"
+        style="@style/title_right_button"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/clean_cache_back_btn_image" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text=""
+        android:textColor="#fff"
+        android:textSize="20sp" />
+
+</FrameLayout>

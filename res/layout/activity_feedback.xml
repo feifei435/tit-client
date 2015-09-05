@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fadingEdge="none"
+    android:orientation="vertical"
+    android:scrollbarThumbVertical="@color/transparent_color" >
+
+    <include layout="@layout/base_title" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/cell_layout_padding" >
+
+        <EditText
+            android:id="@+id/content"
+            style="@style/LoginEditText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_login_edit"
+            android:gravity="top|left|center"
+            android:hint="@string/input_feedback"
+            android:lines="6"
+            android:maxLines="6"
+            android:padding="8.0dip"
+            android:singleLine="false"
+            android:textColorHint="@color/light_grey"
+            android:textSize="16.0dip" />
+
+        <EditText
+            android:id="@+id/contact"
+            style="@style/LoginEditText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cell_layout_padding"
+            android:background="@drawable/bg_login_edit"
+            android:hint="@string/input_phone_num"
+            android:paddingLeft="8.0dip"
+            android:paddingRight="8.0dip"
+            android:singleLine="true"
+            android:textColorHint="@color/light_grey"
+            android:textSize="16.0dip" />
+
+        <Button
+            android:id="@+id/go"
+            style="@style/HeadTxtWithShadow"
+            android:layout_width="200.0dip"
+            android:layout_height="40.0dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="22.0dip"
+            android:background="@drawable/bg_login_btn"
+            android:gravity="center"
+            android:onClick="toGo"
+            android:padding="0.0dip"
+            android:text="@string/submit"
+            android:textSize="18.0dip" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/base_title" />
+
+    <cn.edu.tit.ui.stub.AnimationTabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0" >
+            </FrameLayout>
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/layout_bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <RadioGroup
+                    android:id="@+id/radiogroup"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/bottombg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radio_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/tab_buttom_selector_background"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="新闻" />
+
+                    <RadioButton
+                        android:id="@+id/radio_map"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/tab_buttom_selector_background"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="教务" />
+
+                    <RadioButton
+                        android:id="@+id/radio_setting"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/tab_buttom_selector_background"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="设置" />
+                </RadioGroup>
+            </RelativeLayout>
+        </LinearLayout>
+    </cn.edu.tit.ui.stub.AnimationTabHost>
+
+</LinearLayout>

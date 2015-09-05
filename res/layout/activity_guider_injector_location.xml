@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clickToActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_guider_03"
+    android:onClick="clickToActivity"
+    android:orientation="vertical" >
+
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="200px"
+        android:layout_height="280px"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/splsh_we_meet" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/showtime"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="40dp"
+        android:paddingLeft="20dip"
+        android:text=" 初次相遇："
+        android:textColor="#3cd0a1"
+        android:textSize="30dip"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/img_loading_base"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="56dp"
+        android:paddingLeft="14.0dip"
+        android:paddingRight="14.0dip" />
+
+    <TextView
+        android:id="@+id/showLocation"
+        android:layout_width="200dip"
+        android:layout_height="100dip"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/imageView1"
+        android:layout_margin="1dip"
+        android:layout_marginTop="16dp"
+        android:text="知行合一 行胜于言"
+        android:textColor="#000000"
+        android:textSize="15dip" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/img_loading_base"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:text="1954~2014"
+        android:textSize="25dip" />
+
+</RelativeLayout>

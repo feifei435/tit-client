@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/cn.edu.tit"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/global_background"
+    android:overScrollMode="never" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:id="@+id/framelayout"
+            android:layout_width="fill_parent"
+            android:layout_height="117dip"
+            android:background="#ffffff" >
+
+            <cn.edu.tit.ui.stub.ViewFlow
+                android:id="@+id/viewflow"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" 
+                >
+            </cn.edu.tit.ui.stub.ViewFlow>
+                <cn.edu.tit.ui.stub.CircleFlowIndicator
+                    android:id="@+id/viewflowindic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:padding="2dip"
+                    app:activeColor="#ff0000"
+                    app:activeType="fill"
+                    app:circleSeparation="20dip"
+                    app:inactiveColor="#ffffff"
+                    app:inactiveType="fill"
+                    app:radius="4dip" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+          android:layout_height="100.0dip"
+            android:orientation="horizontal" >
+
+            <FrameLayout
+                    android:id="@+id/fl_lesson_table"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/ic_chief_mailbox_bg" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/btn_lesson_pressed" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20.0dip"
+                            android:includeFontPadding="false"
+                            android:text="课程课表"
+                            android:textColor="#ff333333"
+                            android:textSize="13.0dip" />
+                    </LinearLayout>
+                </FrameLayout>
+
+          <FrameLayout
+                    android:id="@+id/fl_class_table"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/ic_master_mailbox_bg" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/btn_class_pressed" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20.0dip"
+                            android:includeFontPadding="false"
+                            android:text="班级课表"
+                            android:textColor="#ff333333"
+                            android:textSize="13.0dip" />
+                    </LinearLayout>
+                </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5.0dip"
+            android:layout_marginLeft="4.0dip"
+            android:layout_marginRight="4.0dip"
+            android:layout_marginTop="5.0dip"
+            android:background="@drawable/bg_card_item"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="135.0dip"
+                android:orientation="horizontal"
+                android:weightSum="3.0" >
+
+                <FrameLayout
+                    android:id="@+id/fl_college_intro"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/bg_profile_item" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/manage_icon_uninstall" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20.0dip"
+                            android:includeFontPadding="false"
+                            android:text="学院简介"
+                            android:textColor="#ff333333"
+                            android:textSize="13.0dip" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal" >
+
+                    <View
+                        android:layout_width="1.0dip"
+                        android:layout_height="fill_parent"
+                        android:background="#ffecedef" />
+
+                    <FrameLayout
+                        android:id="@+id/fl_coolege_logo"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/bg_profile_item" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical" >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/manage_icon_contents" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20.0dip"
+                                android:includeFontPadding="false"
+                                android:text="学院标识"
+                                android:textColor="#ff333333"
+                                android:textSize="13.0dip" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/profile_media_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|right|center"
+                            android:layout_marginRight="26.0dip"
+                            android:layout_marginTop="16.0dip"
+                            android:background="@drawable/badge"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="12"
+                            android:textColor="@color/C_white"
+                            android:textSize="12.0dip" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0" >
+
+                    <View
+                        android:layout_width="1.0dip"
+                        android:layout_height="fill_parent"
+                        android:background="#ffecedef" />
+
+                    <FrameLayout
+                        android:id="@+id/fl_pastern_setting"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/bg_profile_item" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical" >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/manage_icon_safe" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20.0dip"
+                                android:includeFontPadding="false"
+                                android:text="院系设置"
+                                android:textColor="#ff333333"
+                                android:textSize="13.0dip" />
+                        </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="#ffecedef" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="135.0dip"
+                android:orientation="horizontal"
+                android:weightSum="3.0" >
+
+                <FrameLayout
+                    android:id="@+id/profile_connect_pc"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/bg_profile_item" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/manage_icon_pc" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20.0dip"
+                            android:includeFontPadding="false"
+                            android:text="校园风光"
+                            android:textColor="#ff333333"
+                            android:textSize="13.0dip" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0" >
+
+                    <View
+                        android:layout_width="1.0dip"
+                        android:layout_height="fill_parent"
+                        android:background="#ffecedef" />
+
+                    <FrameLayout
+                        android:id="@+id/fl_loan_free"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/bg_profile_item" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:padding="8.0dip" >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/manage_icon_nfc" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20.0dip"
+                                android:includeFontPadding="false"
+                                android:text="助学贷款"
+                                android:textColor="#ff333333"
+                                android:textSize="13.0dip" />
+                        </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0" >
+
+                    <View
+                        android:layout_width="1.0dip"
+                        android:layout_height="fill_parent"
+                        android:background="#ffecedef" />
+
+                    <FrameLayout
+                        android:id="@+id/fl_recurit"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/bg_profile_item" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical" >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/manage_icon_apk" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20.0dip"
+                                android:includeFontPadding="false"
+                                android:text="校内招聘"
+                                android:textColor="#ff333333"
+                                android:textSize="13.0dip" />
+                        </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

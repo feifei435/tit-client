@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="160.0dip"
+    android:layout_marginLeft="15.0dip"
+    android:layout_marginRight="15.0dip"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/weather_sky_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="110.0dip"
+        android:background="@color/pink"
+        android:paddingLeft="33.0dip"
+        android:paddingRight="20.0dip"
+        android:paddingTop="23.0dip" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/now_tmp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0.0dip"
+                android:paddingBottom="0.0dip"
+                android:paddingTop="0.0dip"
+                android:text="29°"
+                android:textColor="@color/white"
+                android:textSize="50dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/weather_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="北风 三级"
+                android:textColor="@color/white"
+                android:textSize="14.0sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_curTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="9:53"
+            android:textSize="40sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/weather_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="#016287" >
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="33.0dip"
+            android:text="周四/6月12"
+            android:textSize="14.0sp" />
+
+        <TextView
+            android:id="@+id/tv_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20.0dip"
+            android:gravity="center"
+            android:paddingLeft="5.0dip"
+            android:paddingRight="5.0dip"
+            android:text="北京 "
+            android:textColor="@color/white"
+            android:textSize="14.0sp" />
+    </RelativeLayout>
+
+</LinearLayout>

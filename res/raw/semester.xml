@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<semesters>
+  <term >
+	<code>20141</code>
+    <name>2014-2015学年第二学期</name>
+  </term>
+  <term >
+    <code>20140</code>
+	<name>2014-2015学年第一学期</name>
+  </term>
+  <term >
+    <code>20131</code>
+	<name>2013-2014学年第二学期</name>
+  </term>
+  <term >
+	<code>20130</code>
+    <name>2013-2014学年第一学期</name>
+  </term>
+  <term >
+    <code>20121</code>
+	<name>2012-2013学年第二学期</name>
+  </term>
+  <term >
+    <code>20120</code>
+	<name>2012-2013学年第一学期</name>
+  </term>
+</semesters>

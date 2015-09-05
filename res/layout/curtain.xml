@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+   <include layout="@layout/plugin_weather_item_first"
+       android:id="@+id/layout_curtain_ad"
+       />
+
+    <ImageView
+        android:id="@+id/img_curtain_rope"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/layout_curtain_ad"
+        android:layout_marginRight="5dip"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:paddingBottom="5dip"
+        android:src="@drawable/weather_view_rope" />
+
+</RelativeLayout>

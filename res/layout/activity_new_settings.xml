@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+<!--
+    <cn.edu.tit.ui.stub.CurtainView
+        android:id="@+id/cv_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+  -->
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:id="@+id/account_info_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/account_login_bg" />
+
+                <LinearLayout
+                    android:id="@+id/ll_not_login"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        style="@style/TextAppearance.List.Primary"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/account_login_text_top_padding"
+                        android:gravity="center"
+                        android:text="@string/account_login_primary_text"
+                        android:textColor="@color/highlight_text_color"
+                        android:textSize="27.0sp" />
+
+                    <TextView
+                        style="@style/TextAppearance.List.Primary"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/account_login_second_text"
+                        android:textColor="#ffab9587"
+                        android:textSize="13.0sp" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/alread_login"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/account_head_logout" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/account_logout_text_left_padding"
+                        android:paddingTop="@dimen/account_logout_text_top_padding" >
+
+                        <LinearLayout
+                            android:id="@+id/account_exit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/account_user_name"
+                                style="@style/TextAppearance.List.Primary"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:singleLine="true"
+                                android:textColor="@color/primary_text_color_inverse"
+                                android:textSize="@dimen/text_size_large" />
+
+                            <TextView
+                                style="@style/TextAppearance.List.Primary"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text="@string/welecome"
+                                android:textColor="@color/primary_text_color_inverse"
+                                android:textSize="@dimen/text_size_medium" />
+
+                            <TextView
+                                style="@style/TextAppearance.List.Primary"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:text="@string/account_exit"
+                                android:textColor="@color/primary_text_color_inverse"
+                                android:textSize="@dimen/text_size_medium" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </FrameLayout>
+            </FrameLayout>
+
+            <!-- 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="9.0dip"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip" >
+
+                <RelativeLayout
+                    android:id="@+id/account_address_list"
+                    style="@style/Widget.Item.ListView.SingleLine"
+                    android:background="@drawable/list_item_middle_bg" >
+
+                    <ImageView
+                        android:id="@+id/address_item_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15.0dip"
+                        android:adjustViewBounds="true"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:src="@drawable/address_icon" />
+
+                    <TextView
+                        android:id="@+id/address_item_text"
+                        style="@style/TextAppearance.List.Primary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/address_item_icon"
+                        android:text="@string/account_my_address"
+                        android:textSize="@dimen/text_size_medium" />
+
+                    <ImageView
+                        android:id="@+id/address_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/btn_next" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/account_order_edit"
+                    style="@style/Widget.Item.ListView.SingleLine"
+                    android:background="@drawable/list_item_middle_bg" >
+
+                    <ImageView
+                        android:id="@+id/account_order_edit_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15.0dip"
+                        android:adjustViewBounds="true"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:src="@drawable/edit_icon" />
+
+                    <TextView
+                        style="@style/TextAppearance.List.Primary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/account_order_edit_icon"
+                        android:text="@string/account_order_edit_text"
+                        android:textSize="@dimen/text_size_medium" />
+
+                    <ImageView
+                        android:id="@+id/edit_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/btn_next" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/account_write_review"
+                    style="@style/Widget.Item.ListView.SingleLine"
+                    android:background="@drawable/list_item_middle_bg" >
+
+                    <ImageView
+                        android:id="@+id/account_write_review_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15.0dip"
+                        android:adjustViewBounds="true"
+                        android:clickable="false"
+                        android:contentDescription="@null"
+                        android:focusable="false"
+                        android:src="@drawable/review_icon" />
+
+                    <TextView
+                        android:id="@+id/account_write_review_text"
+                        style="@style/TextAppearance.List.Primary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/account_write_review_icon"
+                        android:text="@string/account_write_review"
+                        android:textSize="@dimen/text_size_medium" />
+
+                    <TextView
+                        android:id="@+id/review_item_count"
+                        style="@style/TextAppearance.Small.Inverse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5.0dip"
+                        android:layout_toRightOf="@+id/account_write_review_text"
+                        android:background="@drawable/account_order_remind_count"
+                        android:gravity="center"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:contentDescription="@null"
+                        android:focusable="false"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/btn_next" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/account_favorite"
+                    style="@style/Widget.Item.ListView.SingleLine"
+                    android:background="@drawable/list_item_bottom_bg" >
+
+                    <ImageView
+                        android:id="@+id/account_favorite_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15.0dip"
+                        android:adjustViewBounds="true"
+                        android:clickable="false"
+                        android:contentDescription="@null"
+                        android:focusable="false"
+                        android:src="@drawable/favorite_icon" />
+
+                    <TextView
+                        android:id="@+id/account_favorite_text"
+                        style="@style/TextAppearance.List.Primary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/account_favorite_icon"
+                        android:text="@string/account_favorite"
+                        android:textSize="@dimen/text_size_medium" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:contentDescription="@null"
+                        android:focusable="false"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/btn_next" />
+                </RelativeLayout>
+            </LinearLayout>
+            
+             -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10.0dip"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_shareapp"
+                    style="@style/Widget.Item.ListView.SingleLine"
+                    android:background="@drawable/list_item_top_bg" >
+
+                    <ImageView
+                        android:id="@+id/service_station_item_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15.0dip"
+                        android:adjustViewBounds="true"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:src="@drawable/service_station_icon" />
+
+                    <TextView
+                        android:id="@+id/service_station_item_text"
+                        style="@style/TextAppearance.List.Primary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/service_station_item_icon"
+                        android:text="@string/account_service_station"
+                        android:textSize="@dimen/text_size_medium" />
+
+                    <ImageView
+                        android:id="@+id/service_station_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/btn_next" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_function_introduce"
+                    style="@style/Widget.Item.ListView.SingleLine"
+                    android:background="@drawable/list_item_middle_bg" >
+
+                    <ImageView
+                        android:id="@+id/after_sales_item_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15.0dip"
+                        android:adjustViewBounds="true"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:src="@drawable/after_sales_icon" />
+
+                    <TextView
+                        android:id="@+id/after_sales_item_text"
+                        style="@style/TextAppearance.List.Primary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/after_sales_item_icon"
+                        android:text="@string/account_after_sale_order"
+                        android:textSize="@dimen/text_size_medium" />
+
+                    <ImageView
+                        android:id="@+id/after_sales_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/btn_next" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_update"
+                    style="@style/Widget.Item.ListView.SingleLine"
+                    android:background="@drawable/list_item_middle_bg" >
+
+                    <ImageView
+                        android:id="@+id/repair_progress_item_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15.0dip"
+                        android:adjustViewBounds="true"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:src="@drawable/repair_icon" />
+
+                    <TextView
+                        android:id="@+id/repair_progress_item_text"
+                        style="@style/TextAppearance.List.Primary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/repair_progress_item_icon"
+                        android:text="@string/account_repair_progress"
+                        android:textSize="@dimen/text_size_medium" />
+
+                    <ImageView
+                        android:id="@+id/repair_progress_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/btn_next" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_feedback"
+                    style="@style/Widget.Item.ListView.SingleLine"
+                    android:background="@drawable/list_item_middle_bg" >
+
+                    <ImageView
+                        android:id="@+id/miphone_sales_record_item_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15.0dip"
+                        android:adjustViewBounds="true"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:src="@drawable/sales_record_icon" />
+
+                    <TextView
+                        android:id="@+id/miphone_sales_record_text"
+                        style="@style/TextAppearance.List.Primary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/miphone_sales_record_item_icon"
+                        android:text="@string/account_miphone_sales_record"
+                        android:textSize="@dimen/text_size_medium" />
+
+                    <ImageView
+                        android:id="@+id/miphone_sales_record_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/btn_next" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/account_michat_list"
+                    style="@style/Widget.Item.ListView.SingleLine"
+                    android:background="@drawable/list_item_middle_bg"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:id="@+id/michat_item_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15.0dip"
+                        android:adjustViewBounds="true"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:src="@drawable/michat_icon" />
+
+                    <TextView
+                        android:id="@+id/michat_text"
+                        style="@style/TextAppearance.List.Primary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/michat_item_icon"
+                        android:text="@string/account_michat_text"
+                        android:textSize="@dimen/text_size_medium" />
+
+                    <ImageView
+                        android:id="@+id/michat_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/btn_next" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_about_us"
+                    style="@style/Widget.Item.ListView.SingleLine"
+                    android:background="@drawable/list_item_bottom_bg" >
+
+                    <ImageView
+                        android:id="@+id/policy_item_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15.0dip"
+                        android:adjustViewBounds="true"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:src="@drawable/policy" />
+
+                    <TextView
+                        style="@style/TextAppearance.List.Primary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/policy_item_icon"
+                        android:text="@string/account_policy_text"
+                        android:textSize="@dimen/text_size_medium" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/btn_next" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

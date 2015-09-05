@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/base_title" />
+
+
+    <LinearLayout 
+	    android:layout_width="match_parent"  
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:orientation="vertical"
+		android:layout_marginLeft="15dp"
+    	android:layout_marginRight="15dp">
+    	
+        <AutoCompleteTextView
+        android:id="@+id/et_account_name"
+        style="@style/Widget.AutoCompleteTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/group_first_item_normal_bg"
+        android:hint="@string/account_hint_text"
+        android:selectAllOnFocus="true"
+        android:layout_marginTop="7dp"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/et_account_password"
+        style="@style/Widget.EditText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/group_last_item_normal_bg"
+        android:hint="@string/password"
+        android:imeOptions="actionDone"
+        android:inputType="textPassword"
+        android:singleLine="true" />
+
+    <LinearLayout
+        android:id="@+id/et_captcha_area"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/group_last_item_normal_bg"
+        android:gravity="center"
+        android:padding="10.0dip"
+        android:visibility="gone" >
+
+        <EditText
+            android:id="@+id/et_captcha_code"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@null"
+            android:hint="@string/captcha"
+            android:imeOptions="actionNext"
+            android:inputType="textVisiblePassword"
+            android:maxLength="16"
+            android:singleLine="true" />
+
+        <ImageView
+            android:id="@+id/et_captcha_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4.0dip" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_reg_new"
+            style="@style/Widget.HyperLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5.0dip"
+            android:layout_marginTop="8.0dip"
+            android:layout_toLeftOf="@+id/tv_forget_pwd"
+            android:text="@string/reg_new" />
+
+        <TextView
+            android:id="@+id/tv_forget_pwd"
+            style="@style/Widget.HyperLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="8.0dip"
+            android:text="@string/forget_password" />
+    </RelativeLayout>
+    
+    <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal" >
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/linearlayout01" >
+
+            <EditText
+                android:id="@+id/et_validate_code"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:hint="请输入右侧验证码" />
+       	</LinearLayout>
+       	<ImageView
+            android:id="@+id/iv_showCode"
+            android:layout_width="match_parent"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="match_parent"
+            android:padding="1dp" />
+       	
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        style="@style/Widget.Button.Main"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:layout_marginTop="15.0dip"
+        android:text="@string/login" 
+        android:textColor="@color/black"
+        />
+        
+	</LinearLayout>
+
+</LinearLayout>

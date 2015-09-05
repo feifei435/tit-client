@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <include layout="@layout/base_title"/>
+
+	<LinearLayout 
+	    android:layout_width="match_parent"  
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:orientation="vertical"
+		android:layout_marginLeft="15dp"
+    	android:layout_marginRight="15dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="20dip"
+        android:text="登录成功"
+        android:textSize="30dip" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+                    android:layout_weight="1"
+            android:text="您可以:"
+                    android:textSize="16dip" />
+
+    </LinearLayout>
+    
+    <Button
+        android:id="@+id/btn_submit"
+        style="@style/Widget.Button.Main"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:layout_marginTop="15.0dip"
+        android:text="查看学籍信息" 
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+            android:text="更多功能敬请期待..." />
+	</LinearLayout>
+
+</LinearLayout>

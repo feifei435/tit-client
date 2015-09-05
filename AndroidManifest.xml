@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.edu.tit"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="15" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="cn.edu.tit" />
+
+    <application
+        android:name="cn.edu.tit.Application"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Light.NoTitleBar" >
+        <uses-library android:name="android.test.runner" />
+
+        <activity
+            android:name="cn.edu.tit.atys.SplashActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="cn.edu.tit.atys.TitActivity" >
+        </activity>
+        <activity android:name="cn.edu.tit.atys.NewsActivity" >
+        </activity>
+        <activity android:name="cn.edu.tit.atys.LoginSystemActivity" >
+        </activity>
+        <activity android:name="cn.edu.tit.atys.SettingActivity" >
+        </activity>
+        <activity android:name="cn.edu.tit.atys.Activity_MainPage" >
+        </activity>
+        <activity android:name="cn.edu.tit.TabHostActivity" >
+        </activity>
+        <activity android:name="cn.edu.tit.atys.MyNewsListActivity" >
+        </activity>
+        <activity android:name="cn.edu.tit.atys.MyNewsDetailsActivity" >
+        </activity>
+        <activity android:name="cn.edu.tit.atys.ImageShowActivity" >
+        </activity>
+        <activity
+            android:name="cn.edu.tit.dulp.SelectCtiyActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Select_City_Theme"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity android:name="cn.edu.tit.atys.ClassTableActivity" >
+        </activity>
+        <activity android:name="cn.edu.tit.atys.LessonTableActivity" >
+        </activity>
+        <activity android:name="cn.edu.tit.atys.ShowWebDetailsActivity" >
+        </activity>
+        <activity android:name="cn.edu.tit.atys.AfterLoginActivity" >
+        </activity>
+        <activity android:name="cn.edu.tit.atys.CollegeIntroActivity" >
+        </activity>
+        <activity android:name="cn.edu.tit.atys.CollegeLogoActivity" >
+        </activity>
+        <activity android:name="cn.edu.tit.atys.CollegeHistoryActivity" >
+        </activity>
+        <activity android:name="cn.edu.tit.atys.LoanFreeActivity" >
+        </activity>
+        <activity android:name="cn.edu.tit.atys.ShowLoanWebDetailsActivity" >
+        </activity>
+        <activity android:name="cn.edu.tit.atys.FeedBackActivity" >
+        </activity>
+        <activity android:name="cn.edu.tit.atys.AboutActivity" >
+        </activity>
+        <activity android:name="cn.edu.tit.atys.LoginActivity" >
+        </activity>
+        <activity android:name="cn.edu.tit.atys.FunctionIntroduceActivity" >
+        </activity>
+        <activity android:name="cn.edu.tit.atys.PasternSettingActivity" >
+        </activity>
+         <activity android:name="cn.edu.tit.atys.RecuritActivity" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <include layout="@layout/base_title"/>
+    
+	<LinearLayout 
+	    android:layout_width="match_parent"  
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:orientation="vertical"
+		android:layout_marginLeft="15dp"
+    	android:layout_marginRight="15dp">
+	    
+	    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="20dip"
+            android:text="课程课表"
+            android:textSize="30dip" />
+	    
+	    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+	        <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="学期:"
+                    android:textSize="16dip" />
+	        <Spinner
+                    android:id="@+id/sp_semester"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_weight="1" />
+	    </LinearLayout>
+	    
+	    <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+	        <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="7dp"
+                    android:text="课程:"
+                    android:textSize="16dip" />
+	        <AutoCompleteTextView
+                    android:id="@+id/actv_selSubject"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:completionThreshold="1"
+                    android:layout_marginTop="7dp"
+                    android:hint="输入课程"
+                    android:textSize="16dip" />
+	    </LinearLayout>
+	    
+	    <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+	        
+	        <LinearLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="37dp"
+	            android:layout_marginTop="7dp"
+	            android:background="@drawable/linearlayout01" >
+
+	            <EditText
+	                android:id="@+id/et_validate_code"
+	                android:layout_width="match_parent"
+	                android:layout_height="match_parent"
+	                android:layout_marginLeft="10dp"
+	                android:layout_marginRight="10dp"
+	                android:background="@null"
+	                android:hint="请输入右侧验证码" />
+        	</LinearLayout>
+        	<ImageView
+	            android:id="@+id/iv_showCode"
+	            android:layout_width="match_parent"
+	            android:layout_marginTop="7dp"
+	            android:layout_marginLeft="10dp"
+	            android:layout_height="match_parent"
+	            android:padding="1dp" />
+        	
+	    </LinearLayout>
+	    <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="检索" />
+        
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="温馨提示:若没有返回或结果为空，可能是该学年学期没有开设该课程。" />
+	</LinearLayout>
+
+    
+</LinearLayout>

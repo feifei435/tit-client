@@ -1,0 +1,82 @@
+﻿t<-1309629492;t<;l<i<0>;i<1>;i<2>;>;l<t<p<l<Text;>;l<太原工业学院;>>;;>;t<p<l<Text;>;l<\<script type="text/javascript"\>
+\<!--
+function ChkValue(){
+ var vU=$('UID').innerHTML\;
+ vU=vU.substring(0,1)+vU.substring(2,3)\;
+ var vcFlag = "YES"\; if ($('txt_asmcdefsddsd').value==''){
+ alert('须录入'+vU+'！')\;$('txt_asmcdefsddsd').focus()\;return false\;
+}
+ else if ($('txt_pewerwedsdfsdff').value==''){
+ alert('须录入密码！')\;$('txt_pewerwedsdfsdff').focus()\;return false\;
+}
+ else if ($('txt_sdertfgsadscxcadsads').value=='' && vcFlag == "YES"){
+ alert('须录入验证码！')\;$('txt_sdertfgsadscxcadsads').focus()\;return false\;
+}
+ else { $('divLogNote').innerHTML='\<font color="red"\>正在通过身份验证...请稍候!\</font\>'\;
+ return true\;}
+}
+function SelType(obj){
+ var s=obj.options[obj.selectedIndex].getAttribute('usrID')\;
+ var w=obj.options[obj.selectedIndex].getAttribute('PwdID')\;
+ $('UID').innerHTML=s\;
+ selTyeName()\;
+ if(obj.value=="STU") {
+   document.all.btnGetStuPwd.style.display=''\;
+   document.all.btnReset.style.display='none'\;
+  }
+ else {
+    document.all.btnReset.style.display=''\;
+    document.all.btnGetStuPwd.style.display='none'\;
+  }}
+function openWinLog(theURL,w,h){
+var Tform,retStr\;
+eval("Tform='width="+w+",height="+h+",scrollbars=no,resizable=no'")\;
+pop=window.open(theURL,'winKPT',Tform)\; //pop.moveTo(0,75)\;
+eval("Tform='dialogWidth:"+w+"px\;dialogHeight:"+h+"px\;status:no\;scrollbars=no\;help:no'")\;
+pop.moveTo((screen.width-w)/2,(screen.height-h)/2)\;if(typeof(retStr)!='undefined') alert(retStr)\;
+}
+function showLay(divId){
+var objDiv = eval(divId)\;
+if (objDiv.style.display=="none")
+{objDiv.style.display=""\;}
+else{objDiv.style.display="none"\;}
+}
+function selTyeName(){
+  $('typeName').value=$N('Sel_Type')[0].options[$N('Sel_Type')[0].selectedIndex].text\;
+}
+window.onload=function(){
+	var sPC=MSIE?window.navigator.userAgent+window.navigator.cpuClass+window.navigator.appMinorVersion+' SN:NULL':window.navigator.userAgent+window.navigator.oscpu+window.navigator.appVersion+' SN:NULL'\;
+try{$('pcInfo').value=sPC\;}catch(err){}
+try{$('txt_asmcdefsddsd').focus()\;}catch(err){}
+try{$('typeName').value=$N('Sel_Type')[0].options[$N('Sel_Type')[0].selectedIndex].text\;}catch(err){}
+}
+function openWinDialog(url,scr,w,h)
+{
+var Tform\;
+eval("Tform='dialogWidth:"+w+"px\;dialogHeight:"+h+"px\;status:"+scr+"\;scrollbars=no\;help:no'")\;
+window.showModalDialog(url,1,Tform)\;
+}
+function openWin(theURL){
+var Tform,w,h\;
+try{
+	w=window.screen.width-10\;
+}catch(e){}
+try{
+h=window.screen.height-30\;
+}catch(e){}
+try{eval("Tform='width="+w+",height="+h+",scrollbars=no,status=no,resizable=yes'")\;
+pop=parent.window.open(theURL,'',Tform)\;
+pop.moveTo(0,0)\;
+parent.opener=null\;
+parent.close()\;}catch(e){}
+}
+function changeValidateCode(Obj){
+var dt = new Date()\;
+Obj.src="../sys/ValidateCode.aspx?t="+dt.getMilliseconds()\;
+}
+function chkpwd(obj) {  if(obj.value!='')  {    var s=md5(document.all.txt_asmcdefsddsd.value+md5(obj.value).substring(0,30).toUpperCase()+'14101').substring(0,30).toUpperCase()\;   document.all.dsdsdsdsdxcxdfgfg.value=s\;} else { document.all.dsdsdsdsdxcxdfgfg.value=obj.value\;} }  function chkyzm(obj) {  if(obj.value!='') {   var s=md5(md5(obj.value.toUpperCase()).substring(0,30).toUpperCase()+'14101').substring(0,30).toUpperCase()\;   document.all.fgfggfdgtyuuyyuuckjg.value=s\;} else {    document.all.fgfggfdgtyuuyyuuckjg.value=obj.value.toUpperCase()\;}}//--\>
+\</script\>;>>;;>;t<;l<i<1>;>;l<t<;l<i<0>;>;l<t<p<l<Text;>;l<\<option value='STU' usrID='学　号'\>学生\</option\>
+\<option value='TEA' usrID='工　号'\>教师教辅人员\</option\>
+\<option value='SYS' usrID='帐　号'\>管理人员\</option\>
+\<option value='ADM' usrID='帐　号'\>门户维护员\</option\>
+;>>;;>;>>;>>;>>;>�Q����r���)��0OXD
